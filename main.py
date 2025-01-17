@@ -39,13 +39,15 @@ def count_characters(file):
         if letter in characters:
             num_char_dict[letter] += 1
 
-    print(
-        f"The number of times that different characters appear in the document\n{num_char_dict}"
-    )
+    for char in num_char_dict:
+        char_count = num_char_dict[char]
+        print(f"The '{char}' character was found {char_count} times")
+    print("--- End report ---")
 
 
 def main():
     count_book_words(frankenstein_book)
+    print()
     count_characters(frankenstein_book)
 
 
